@@ -1,0 +1,74 @@
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* Colors */
+
+@define-color background    #000000;
+@define-color foreground    #aaaaaa;
+
+@define-color color1        #556677;
+@define-color color2        #8c7f70;
+@define-color color3        #9b8d7f;
+@define-color color4        #888888;
+@define-color color5        #999999;
+@define-color color6        #c1c1c1;
+
+window#waybar {
+    background: rgba(130, 130, 130, 1);
+}
+
+#workspaces button {
+    color: @color4;
+    background: transparent;
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: @background;
+    background-color: @color4;
+}
+
+.modules-right {
+    background-color: @background;
+}
+
+.modules-left {
+    background-color: @background;
+}
+
+/* Custom stuff */
+
+#custom-separator {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+/* Modules */
+
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#pulseaudio {
+    color: @foreground;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#battery {
+    color: @foreground;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#clock {
+    color: @foreground;
+    padding-left: 10px;
+    padding-right: 10px;
+}
