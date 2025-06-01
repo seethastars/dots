@@ -33,9 +33,9 @@ do
       echo -e "${YELLOW}Installing packages...${RC}"
 
       # define packages
-      hypr_pkgs='hyprland hyprpaper hypridle hyprlock hyprshot hyprpolkitagent'
+      hypr_pkgs='hyprland hyprpaper hypridle hyprlock hyprshot hyprpicker hyprpolkitagent'
       hypr2_pkgs='xdg-desktop-portal-hyprland xdg-desktop-portal-gtk waybar dunst wl-clipboard brightnessctl'
-      util_pkgs='man zathura-pdf-mupdf htop gvfs gvfs-afc p7zip unzip alsa-utils net-tools imagemagick'
+      util_pkgs='man zathura-pdf-mupdf htop gvfs gvfs-afc p7zip unzip alsa-utils net-tools imagemagick nm-connection-editor'
       app_pkgs='librewolf-bin foot fuzzel thunar ristretto mpv cmus neovim'
       theme_pkgs='nwg-look papirus-icon-theme gnome-themes-extra'
       fonts_pkgs='ttf-jetbrains-mono-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji'
