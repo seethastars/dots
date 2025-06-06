@@ -17,6 +17,7 @@ set_wallpaper() {
         exit 1
     fi
      
+    hellwal -i "$WALLPAPER_DIR/$SELECTED"
     # wal -i "$WALLPAPER_DIR/$SELECTED"
 
     swww img --transition-fps 60 --transition-type any "$WALLPAPER_DIR/$SELECTED"

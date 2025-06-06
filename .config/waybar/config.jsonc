@@ -1,32 +1,30 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 19,
-  "width": 1366,
+  "height": 30,
+  "width": 1340,
+  "margin-top": 7,
   "reload_style_on_change": true,
 
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": [],
-  "modules-right": ["tray", "pulseaudio", "custom/separator", "battery", "custom/separator", "clock"],
+  "modules-left": ["clock"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["tray", "pulseaudio", "battery", "custom/weather"],
 
   /* Custom stuff */
 
-  "custom/separator": {
-      "format": "|",
+  "custom/weather": {
+      "exec": "~/.local/bin/weather",
       "tooltip": false
   },
 
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5"
+      "active": "",
+      "default": ""
     },
     "persistent-workspaces": {
-      "*": 5
+      "*": 9
     }
   },
 
@@ -36,8 +34,8 @@
   },
 
   "pulseaudio": {
-    "format": "Vol: {volume}%",
-    "format-muted": "Vol: muted",  // 
+    "format": "{icon} {volume}",
+    "format-muted": " muted",  // 
     "format-icons": {
         "headphone": "",
         "default": ["", ""]
@@ -55,14 +53,14 @@
         "warning": 30,
         "critical": 15
     },
-    "format": "Bat: {capacity}%",
+    "format": "{icon} {capacity}",
     "format-icons": ["󰁻", "󰁽", "󰁿", "󰂀", "󰁹"],
-    "format-charging": "Bat: {capacity}%",
+    "format-charging": "󱐋 {capacity}",
     "tooltip": false
   },
 
   "clock": {
-    "format": "{:%A, %d %B - %I:%M %p}", //    
+    "format": "It's {:%A, %d %B, %I:%M %p}", //    
     "interval": 1,
     "tooltip": false
   }

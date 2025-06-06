@@ -9,18 +9,11 @@
 
 /* Colors */
 
-@define-color background    #000000;
-@define-color foreground    #aaaaaa;
-
-@define-color color1        #556677;
-@define-color color2        #8c7f70;
-@define-color color3        #9b8d7f;
-@define-color color4        #888888;
-@define-color color5        #999999;
-@define-color color6        #c1c1c1;
+@import "/home/pwnd/.cache/hellwal/waybar-colors.css";
 
 window#waybar {
-    background: rgba(130, 130, 130, 1);
+    background-color: @background;
+    border-radius: 10px;
 }
 
 #workspaces button {
@@ -30,22 +23,16 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @background;
-    background-color: @color4;
-}
-
-.modules-right {
-    background-color: @background;
-}
-
-.modules-left {
-    background-color: @background;
+    color: @color2;
+    background-color: transparent;
 }
 
 /* Custom stuff */
 
-#custom-separator {
-    color: rgba(255, 255, 255, 0.5)
+#custom-weather {
+    color: @color5;
+    padding-left: 7px;
+    padding-right: 10px;
 }
 
 /* Modules */
@@ -56,19 +43,19 @@ window#waybar {
 }
 
 #pulseaudio {
-    color: @foreground;
+    color: @color5;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 #battery {
-    color: @foreground;
+    color: @color5;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 #clock {
-    color: @foreground;
+    color: @color5;
     padding-left: 10px;
     padding-right: 10px;
 }

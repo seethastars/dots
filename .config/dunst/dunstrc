@@ -15,7 +15,7 @@ sort = yes
 stack_duplicates = true
 hide_duplicate_count = true
 show_indicators = yes
-corner_radius = 0
+corner_radius = 7
 
 [urgency_low]
     background = "#000000"
