@@ -8,6 +8,6 @@
 - Video Player: [mpv](https://mpv.io/)
 - Music Player: [cmus](https://github.com/cmus/cmus)
 - Browser: [Librewolf](https://librewolf.net/)
-- Colorscheme: [black-metal-neovim](https://github.com/metalelf0/black-metal-theme-neovim)
+- Colorscheme: [hellwal](https://github.com/danihek/hellwal)
 
 ![desktop](.assets/desktop.png)
