@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # This script if for choosing a wallpaper using rofi, setting the wallpaper with swww and generate a colorscheme from it using pywal.
-# For using this script only as a wallpaper changer comment out the line: "wal -i "WALLPAPER_DIR/$SELECTED""
+# For using this script only as a wallpaper changer comment out the line: "hellwal -i "WALLPAPER_DIR/$SELECTED""
 
 # Directory containing wallpapers
 WALLPAPER_DIR=~/.local/wallpapers/
@@ -18,14 +18,13 @@ set_wallpaper() {
     fi
      
     hellwal -i "$WALLPAPER_DIR/$SELECTED"
-    # wal -i "$WALLPAPER_DIR/$SELECTED"
 
     swww img --transition-fps 60 --transition-type any "$WALLPAPER_DIR/$SELECTED"
 
     # Restart mako (if it's running)
-    if pgrep dunst > /dev/null; then
-      pkill dunst
-      setsid -f dunst &
+    if pgrep mako > /dev/null; then
+      pkill mako
+      setsid -f mako &
     fi
 
     # Reload waybar (if it's running)

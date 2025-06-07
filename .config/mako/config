@@ -1,0 +1,18 @@
+include=~/.cache/hellwal/mako-colors
+progress-color=#1b201b
+history=0
+sort=-time
+layer=overlay
+width=300
+height=110
+border-size=1
+border-radius=7
+icons=0
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+font=JetBrainsMono Nerd Font 9
+
+[app-name=wp-vol]
+layer=overlay
+history=0
