@@ -8,9 +8,9 @@
 
   "modules-left": ["clock"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray", "pulseaudio", "battery", "custom/weather"],
+  "modules-right": ["mpd", "tray", "pulseaudio", "battery", "custom/weather"],
 
-  /* Custom stuff */
+  /* custom stuff */
 
   "custom/weather": {
       "exec": "~/.local/bin/weather",
@@ -20,12 +20,28 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "active": "",
-      "default": ""
+      "active": "",
+      "default": "",
+      //"active": "",
+      //"default": ""
     },
     "persistent-workspaces": {
       "*": 9
     }
+  },
+
+  "mpd": {
+    "format": "{stateIcon} {artist} - {title} ",     // ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "Stopped ",
+    "interval": 1,
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+    "on-click": "rmpc togglepause",
+    "tooltip-format": "status: ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "tooltip-format-disconnected": "MPD (disconnected)"
   },
 
   "tray": {
@@ -35,7 +51,7 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}",
-    "format-muted": " muted",  // 
+    "format-muted": " muted",  //
     "format-icons": {
         "headphone": "",
         "default": ["", ""]
@@ -60,7 +76,7 @@
   },
 
   "clock": {
-    "format": "It's {:%A, %d %B, %I:%M %p}", //    
+    "format": "It's {:%A, %d %B, %I:%M %p} ", //    
     "interval": 1,
     "tooltip": false
   }

@@ -36,7 +36,7 @@ do
       hypr_pkgs='hyprland hypridle hyprlock hyprshot hyprpicker hyprpolkitagent'
       hypr2_pkgs='xdg-desktop-portal-hyprland xdg-desktop-portal-gtk waybar swww dunst wl-clipboard brightnessctl'
       util_pkgs='man zathura-pdf-mupdf htop gvfs gvfs-afc p7zip unzip alsa-utils net-tools imagemagick nm-connection-editor'
-      app_pkgs='librewolf-bin foot fuzzel thunar ristretto mpv cmus neovim'
+      app_pkgs='librewolf-bin foot fuzzel thunar ristretto mpv mpd rmpc neovim'
       theme_pkgs='nwg-look papirus-icon-theme gnome-themes-extra hellwal'
       fonts_pkgs='ttf-jetbrains-mono-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji'
 
