@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This script if for choosing a wallpaper using rofi, setting the wallpaper with swww and generate a colorscheme from it using pywal.
+# This script if for choosing a wallpaper using fuzzel, setting the wallpaper with swww and generate a colorscheme from it using hellwal.
 # For using this script only as a wallpaper changer comment out the line: "hellwal -i "WALLPAPER_DIR/$SELECTED""
 
 # Directory containing wallpapers

@@ -32,6 +32,15 @@ window#waybar {
     background-color: transparent;
 }
 
+tooltip {
+    background-color: @background;
+    border-radius: 7px;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
 /* Custom stuff */
 
 #custom-weather {
