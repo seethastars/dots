@@ -48,9 +48,7 @@ do
       cp -r .config/ .local/ .bashrc ~/
       mkdir -p ~/.config/gtk-2.0/
       mkdir -p ~/.config/git/
-      mkdir -p ~/.cache/bash/
       touch ~/.config/git/gitconfig
-      touch ~/.cache/bash/history
 
       echo -e  "${BLUE}Enjoy Hyprland.${RC}"
       exit 1
