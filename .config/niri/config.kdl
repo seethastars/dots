@@ -142,6 +142,7 @@ input {
         // off
         accel-profile "flat"
     }
+    focus-follows-mouse
 }
 
 
