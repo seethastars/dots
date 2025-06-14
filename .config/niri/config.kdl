@@ -167,6 +167,7 @@ window-rule {
 window-rule { 
     match app-id=r#"thunar$"# title="Open File"
     match app-id=r#"thunar$"# title="File Operation Progress"
+    match app-id=r#"thunar$"# title="^Rename"
     match app-id=r#"librewolf$"# title="^Save As$"
     match app-id=r#"librewolf$"# title="^Save Image$"
     match app-id=r#"librewolf$"# title="^Enter name of file to save to…$"
