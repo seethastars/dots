@@ -1,0 +1,80 @@
+{
+  "position": "top",
+  "layer": "top",
+  "height": 30,
+  "width": 1340,
+  "margin-top": 7,
+  "reload_style_on_change": true,
+
+  "modules-left": ["clock"],
+  "modules-center": ["niri/workspaces"],
+  "modules-right": ["mpd", "tray", "pulseaudio", "battery"],
+
+  /* custom stuff */
+
+  "custom/weather": {
+      "exec": "~/.local/bin/weather",
+      "tooltip": false
+  },
+
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      //"active": "",
+      //"default": ""
+    }
+  },
+
+  "mpd": {
+    "format": "{stateIcon} {artist} - {title} ",     // ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "Stopped ",
+    "interval": 1,
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+    "on-click": "rmpc togglepause",
+    "tooltip-format": "status: ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}",
+    "format-muted": " muted",  //
+    "format-icons": {
+        "headphone": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "ignored-sinks": ["Easy Effects Sink"],
+    "tooltip": false
+  },
+
+  "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}",
+    "format-icons": ["󰁻", "󰁽", "󰁿", "󰂀", "󰁹"],
+    "format-charging": "󱐋 {capacity}",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "It's {:%A, %d %B, %I:%M %p} ", //    
+    "interval": 1,
+    "tooltip": false
+  }
+}

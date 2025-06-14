@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# This script if for choosing a wallpaper using fuzzel, setting the wallpaper with swww and generate a colorscheme from it using hellwal.
+# For using this script only as a wallpaper changer comment out the line: "hellwal -i "WALLPAPER_DIR/$SELECTED""
+
+# Directory containing wallpapers
+WALLPAPER_DIR=~/.local/wallpapers/
+
+set_wallpaper() {
+
+    # List files in the wallpaper directory and send them to fuzzel
+    SELECTED=$(ls $WALLPAPER_DIR | fuzzel -p "Pick a Wallpaper" -d)
+
+    # Check if a selection was made
+    if [ -z "$SELECTED" ]; then
+        notify-send -t 3000 "No wallpaper selected."
+        exit 1
+    fi
+     
+    hellwal -i "$WALLPAPER_DIR/$SELECTED"
+
+    swww img --transition-fps 60 --transition-type any "$WALLPAPER_DIR/$SELECTED"
+
+    # Restart mako (if it's running)
+    if pgrep mako > /dev/null; then
+      pkill mako
+      setsid -f mako &
+    fi
+
+    # Reload waybar (if it's running)
+    if pgrep waybar > /dev/null; then
+      killall -SIGUSR2 waybar
+    fi
+
+    notify-send -t 3000 "Wallpaper and Colorscheme changed."
+}
+
+set_wallpaper

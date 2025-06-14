@@ -1,0 +1,12 @@
+2025-06-14T16:51:23 exception: inotify_add_watch("/home/pwnd/Music/all") failed: No such file or directory
+2025-06-14T16:51:23 config: option "path" on line 14 was not recognized
+2025-06-14T16:51:43 exception: inotify_add_watch("/home/pwnd/Music/all") failed: No such file or directory
+2025-06-14T16:51:43 config: option "path" on line 14 was not recognized
+2025-06-14T16:52:00 config: option "path" on line 14 was not recognized
+2025-06-14T17:00:24 config: option "path" on line 14 was not recognized
+2025-06-14T17:00:44 exception: Stored playlists are disabled
+2025-06-14T17:00:57 exception: Stored playlists are disabled
+2025-06-14T17:02:18 player: played "shoegaze/cloudyfield/cloudyfield - is that love.mp3"
+2025-06-14T17:09:09 config: option "path" on line 14 was not recognized
+2025-06-14T17:09:15 exception: Stored playlists are disabled
+2025-06-14T17:09:56 exception: Stored playlists are disabled

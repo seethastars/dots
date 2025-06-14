@@ -1,0 +1,11 @@
+#!/bin/sh
+
+volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+volume_as_percent="${volume##*.}%"
+
+# Use a fixed notification ID (e.g., 1000)
+NOTIF_ID=1000
+
+#dunstify -t 1000 -a 'wp-vol' -h int:value:"$volume_as_percent" -r "$NOTIF_ID" "Volume: ${volume_as_percent}"
+
+notify-send -t 1000 -a 'wp-vol' -h int:value:"$volume_as_percent" -i "$NOTIF_ID" "Volume: ${volume_as_percent}"
