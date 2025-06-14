@@ -8,7 +8,7 @@
 
   "modules-left": ["clock"],
   "modules-center": ["niri/workspaces"],
-  "modules-right": ["mpd", "tray", "pulseaudio", "battery"],
+  "modules-right": ["tray", "mpd", "pulseaudio", "battery"],
 
   /* custom stuff */
 
