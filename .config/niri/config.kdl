@@ -223,7 +223,8 @@ binds {
     Mod+L hotkey-overlay-title="Lock the Screen: hyprlock"  { spawn "hyprlock"; }
 
     // Scripts
-    Ctrl+Alt+W { spawn "bash" "-c" "~/.local/bin/wallpaper"; }
+    Ctrl+Alt+W  { spawn "bash" "-c" "~/.local/bin/wallpaper"; }
+    Mod+P       { spawn "bash" "-c" "~/.local/bin/power"; }
 
     // Audio
     XF86AudioRaiseVolume    allow-when-locked=true    { spawn "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ~/.local/bin/wp-vol"; }
@@ -373,7 +374,7 @@ binds {
     Mod+Space   { toggle-window-floating; }
     Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
 
-    Mod+P { toggle-column-tabbed-display; }
+    //Mod+Shift+P { toggle-column-tabbed-display; }
 
     // Screenshot
     Print { screenshot; }
