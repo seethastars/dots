@@ -14,6 +14,7 @@
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
+spawn-at-startup "hypridle"
 spawn-at-startup "mako"
 
 spawn-at-startup "xwayland-satellite"
@@ -165,6 +166,16 @@ window-rule {
     default-column-width {}
 }
 
+window-rule {
+    match app-id="foot"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="btop"
+    open-maximized true
+}
+
 window-rule { 
     match app-id=r#"thunar$"# title="Open File"
     match app-id=r#"thunar$"# title="File Operation Progress"
@@ -221,6 +232,8 @@ binds {
     Mod+Q repeat=false { close-window; }
 
     Mod+L hotkey-overlay-title="Lock the Screen: hyprlock"  { spawn "hyprlock"; }
+
+    Ctrl+Shift+Escape  { spawn "foot" "btop"; }
 
     // Scripts
     Ctrl+Alt+W  { spawn "bash" "-c" "~/.local/bin/wallpaper"; }
