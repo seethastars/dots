@@ -75,8 +75,8 @@ layout {
 
         width 1
 
-        active-color "#c1c1c1"
-        inactive-color "#505050"
+        active-color "#a0a0a0"
+        inactive-color "#303030"
     }
 
     border {
@@ -196,7 +196,7 @@ layer-rule {
     match namespace="waybar"
     match at-startup=true
 
-    opacity 0.9
+    opacity 0.8
     geometry-corner-radius 7
 }
 

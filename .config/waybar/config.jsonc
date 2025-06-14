@@ -8,12 +8,19 @@
 
   "modules-left": ["clock"],
   "modules-center": ["niri/workspaces"],
-  "modules-right": ["tray", "mpd", "pulseaudio", "battery"],
+  "modules-right": ["tray", "mpd", "pulseaudio", "battery", "custom/power"],
 
   /* custom stuff */
 
   "custom/weather": {
       "exec": "~/.local/bin/weather",
+      "tooltip": false
+  },
+
+  "custom/power": {
+      "format": "{icon}",
+      "format": "⏻",
+      "on-click": "~/.local/bin/power",
       "tooltip": false
   },
 
