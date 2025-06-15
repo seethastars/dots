@@ -152,7 +152,7 @@ input {
 animations {
     // off
 
-    // slowdown 3.0
+    slowdown 1.5
 }
 
 
