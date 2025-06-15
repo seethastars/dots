@@ -15,8 +15,6 @@
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "hypridle"
-spawn-at-startup "mako"
-
 spawn-at-startup "xwayland-satellite"
 
 
@@ -207,7 +205,7 @@ layer-rule {
     match namespace="waybar"
     match at-startup=true
 
-    opacity 0.8
+    opacity 0.9
     geometry-corner-radius 7
 }
 
@@ -237,17 +235,17 @@ binds {
 
     // Scripts
     Ctrl+Alt+W  { spawn "bash" "-c" "~/.local/bin/wallpaper"; }
-    Mod+P       { spawn "bash" "-c" "~/.local/bin/power"; }
+    Mod+P hotkey-overlay-title="Power Menu"   { spawn "bash" "-c" "~/.local/bin/power"; }
 
     // Audio
-    XF86AudioRaiseVolume    allow-when-locked=true    { spawn "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ~/.local/bin/wp-vol"; }
-    XF86AudioLowerVolume    allow-when-locked=true    { spawn "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.local/bin/wp-vol"; }
+    XF86AudioRaiseVolume    allow-when-locked=true    { spawn "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ~/.local/bin/wp-vol up"; }
+    XF86AudioLowerVolume    allow-when-locked=true    { spawn "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.local/bin/wp-vol down"; }
     XF86AudioMute           allow-when-locked=true    { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute        allow-when-locked=true    { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
       
     // Brightness
-    XF86MonBrightnessUp     allow-when-locked=true    { spawn "brightnessctl" "s" "5%+"; }
-    XF86MonBrightnessDown   allow-when-locked=true    { spawn "brightnessctl" "s" "5%-"; }
+    XF86MonBrightnessUp     allow-when-locked=true    { spawn "bash" "-c" "brightnessctl set 5%+ && ~/.local/bin/brightness up"; }
+    XF86MonBrightnessDown   allow-when-locked=true    { spawn "bash" "-c" "brightnessctl set 5%- && ~/.local/bin/brightness down"; }
 
     // Playerctl
     XF86AudioPlay     { spawn "playerctl" "play-pause"; }

@@ -1,11 +1,31 @@
 #!/bin/sh
 
-volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
-volume_as_percent="${volume##*.}%"
+get_volume_info() {
+    volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+    volume_as_percent="${volume##*.}"
+}
 
-# Use a fixed notification ID (e.g., 1000)
-NOTIF_ID=1000
+case $1 in
+    down)
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+        ;;
+    up)
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ +5%
+        ;;
+    *)
+        echo "Usage: $0 {down|up}"
+        exit 1
+        ;;
+esac
 
-#dunstify -t 1000 -a 'wp-vol' -h int:value:"$volume_as_percent" -r "$NOTIF_ID" "Volume: ${volume_as_percent}"
+# Get updated volume info
+get_volume_info
 
-notify-send -t 1000 -a 'wp-vol' -h int:value:"$volume_as_percent" -i "$NOTIF_ID" "Volume: ${volume_as_percent}"
+# Send notification using Mako
+notify-send "Volume: ${volume_as_percent}%" \
+    -h int:value:$volume_as_percent \
+    -t 1200 \
+    -e \
+    -u low \
+    -h string:synchronous:volume-$volume_as_percent \
+    -h string:x-canonical-private-synchronous:volume

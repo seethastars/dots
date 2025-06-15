@@ -6,7 +6,7 @@
   "margin-top": 7,
   "reload_style_on_change": true,
 
-  "modules-left": ["clock"],
+  "modules-left": ["custom/menu", "clock", "custom/weather"],
   "modules-center": ["niri/workspaces"],
   "modules-right": ["tray", "mpd", "pulseaudio", "battery", "custom/power"],
 
@@ -22,6 +22,13 @@
       "format": "⏻",
       "on-click": "~/.local/bin/power",
       "tooltip": false
+  },
+
+  "custom/menu": {
+      "format": "",
+      "on-click": "fuzzel",
+      "tooltip": true,
+      "tooltip-format": "Launcher"
   },
 
   "niri/workspaces": {
